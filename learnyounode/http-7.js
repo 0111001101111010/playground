@@ -12,8 +12,8 @@ http.get(process.argv[2],function(response){
 })
 */
 var http = require('http')
-var url = process.argv[2]
-//var url = "http://www.google.com"
+//var url = process.argv[2]
+var url = "http://www.google.com"
 
 http.get(url, function (response) {
   response.setEncoding('utf8')

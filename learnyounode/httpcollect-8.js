@@ -12,7 +12,7 @@ http.get(url, function (response) {
     return console.error(data)
 
     data = data.toString()
-    console.log(data.length)
+   // console.log(data.length)
     console.log(data)
     }
   ))
