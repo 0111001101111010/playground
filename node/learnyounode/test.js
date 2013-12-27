@@ -1,5 +1,7 @@
-  moment = require('moment')
-  //form the date format "2013-12-25 09:20"
+var	 moment = require('moment'),
+	 fs 	 = require('fs'),
+	 http = require('http')
+	  //form the date format "2013-12-25 09:20"
 
 
 var time = moment().format('YYYY-MM-DD hh:mm')
@@ -22,3 +24,10 @@ move(dir,ext,function(err, data){
 //exp("../",".js")
 
 */ 
+
+
+  var server = http.createServer(function (req, res) {
+    // request handling logic...
+    fs.createReadStream().pipe(res)
+  })
+  server.listen(8080)
