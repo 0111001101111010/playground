@@ -1,8 +1,27 @@
-     var add_the_handlers = function (nodes) {
-         var i;
-         for (i = 0; i < nodes.length; i += 1) {
-             nodes[i].onclick = function (i) {
-                 return function (e) {
-                     alert(e);
-}; }(i);
-} };
+
+
+function character(first,last){
+ 	this.first = first
+ 	this.last  = last
+}
+
+var arnold = new character("arnold","terminator")
+
+character.prototype.getToDaChoppa =function(){
+  // Write your do/while loop here!
+  problem = true;
+  while(problem){
+      console.log("This will only happen once.");
+   problem= false;
+}
+} 
+
+arnold.getToDaChoppa()
+var John = new character ('John','Connor')
+
+//can he get to the chopper also? 
+John.getToDaChoppa()
+//"This will only happen once."
+//yes! he can 
+
+console.log(character.toString())
