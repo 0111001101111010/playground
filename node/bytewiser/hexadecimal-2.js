@@ -2,7 +2,7 @@
 
 
 //serial string 
-buf = new Buffer([0, 15, 24, 3, 250, 83],'hex');
+buf = new Buffer([0, 15, 24, 3, 250, 83]);
 //len = buf.write('bytewiser');
 console.log(buf.toString('hex'))
 
