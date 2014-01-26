@@ -1,2 +1,2 @@
-import org.apache.httpcomponents.httpclient.*;
+import org.apache.httpcomponents.httpclient;
 
