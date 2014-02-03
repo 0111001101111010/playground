@@ -35,5 +35,17 @@ app.get('/quotes/:name', function(request, response) {
   response.write(quote);
   response.end();
 });
+app.get('/quotes', function(request, response) {
+
+  response.writeHead(200);
+ //var quote = quotes[request.params.name];
+  for (var i in quotes){
+    quote = quotes[i];
+    response.write(quote)
+  }
+  //response.write(quotes);
+  response.end();
+});
+
 
 app.listen(8080);
