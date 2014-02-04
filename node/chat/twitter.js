@@ -3,7 +3,7 @@ var request = require('request');
 
 options = {
   protocol: "http:",
-  host: "twitter.com",
+  host: "search.twitter.com",
   pathname: '/search.json',
   query: { q: "codeschool"}
 };
