@@ -72,3 +72,42 @@ test3 = _.reject(test3,function(num){
 //rejects all even
 console.log(test3)
 
+console.log('####pluck###');
+//pluck
+var classes =[{course: 1, title:'intro to physiology'},
+{course:2,title:'intro to psych'},
+{course:3, title:'intro to dance'}]
+
+console.log(_.pluck(classes,'title'));
+
+console.log('####max###');
+//max
+console.log(_.max(test3))
+console.log('####min###');
+//min
+console.log(_.min(test3))
+
+console.log('####shuffle###');
+//shuffle
+console.log(_.min(test3))
+
+//makeArray of Num Size
+function makeArray(num){
+	var foo = new Array;
+	for (var i = 0; i < num;i++)
+		foo.push(i);
+	return foo;
+}
+
+//makeArray Random of Num Size
+var makeArrayRand = function(num){
+	var foo = new Array;
+	for (var i = 0; i < num;i++)
+		foo.push(i);
+	return _.shuffle(foo);
+}
+var test = makeArrayRand(1000);
+var hundred = _.bind(makeArrayRand,100);
+console.log(hundred());
+console.log(test[0]);
+
