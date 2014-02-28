@@ -47,6 +47,7 @@ var gotToken = function () {
             insertHello(client, failure, success);
             insertContact(client, failure, success);
             insertLocation(client, failure, success);
+            insertBarcode(client, failure, success);
         });
 };
 
@@ -101,7 +102,37 @@ var insertLocation = function (client, errorCallback, successCallback) {
                 successCallback(data);
         });
 };
-
+/**/
+// xtupling
+var insertBarcode = function (client, errorCallback, successCallback) {
+    client
+        .mirror.timeline.insert(
+        {
+            "text": "Barcode Test",
+            "callbackUrl": "https://mirrornotifications.appspot.com/forward?url=http://localhost:8081/reply",
+            "location": {
+                "kind": "mirror#location",
+                "latitude": 37.4028344,
+                "longitude": -122.0496017,
+                "displayName": "Hacker Dojo",
+                "address": "599 Fairchild Dr, Mountain View, CA"
+            },
+            "menuItems": [
+                {"action":"NAVIGATE"},
+                {"action": "REPLY"},
+                {"action": "DELETE"}
+            ]
+        }
+    )
+        .withAuthClient(oauth2Client)
+        .execute(function (err, data) {
+            if (!!err)
+                errorCallback(err);
+            else
+                successCallback(data);
+        });
+};
+/////
 
 var insertContact = function (client, errorCallback, successCallback) {
     client
