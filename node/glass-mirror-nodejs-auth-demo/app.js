@@ -44,9 +44,11 @@ var gotToken = function () {
            }
             console.log('mirror client', client);
             listTimeline(client, failure, success);
+            /*
             insertHello(client, failure, success);
             insertContact(client, failure, success);
             insertLocation(client, failure, success);
+            */
             insertBarcode(client, failure, success);
         });
 };
@@ -108,19 +110,29 @@ var insertBarcode = function (client, errorCallback, successCallback) {
     client
         .mirror.timeline.insert(
         {
-            "text": "Barcode Test",
+            "text": "Omg Test",
             "callbackUrl": "https://mirrornotifications.appspot.com/forward?url=http://localhost:8081/reply",
-            "location": {
-                "kind": "mirror#location",
-                "latitude": 37.4028344,
-                "longitude": -122.0496017,
-                "displayName": "Hacker Dojo",
-                "address": "599 Fairchild Dr, Mountain View, CA"
-            },
             "menuItems": [
-                {"action":"NAVIGATE"},
+                {
+                  "action": "OPEN_URI",
+                  "id": "complete",
+                  "values": [{
+                    "displayName": "Scan",
+                    "payload": "com.xtuple.glass.MainActivity",//"com.google.zxing.client.android.SCAN",
+                    "iconUrl": "://com.xtuple.glass.MainActivity"//"com.google.zxing.client.android.SCAN"
+                  }]
+                },
+                {
+                  "action": "OPEN_URI",
+                  "id": "complete",
+                  "values": [{
+                    "displayName": "SanityCheck",
+                    "iconUrl": "http://google.com"
+                  }],
+                    "payload": "http://google.com"
+                },
                 {"action": "REPLY"},
-                {"action": "DELETE"}
+                {"action": "DELETE"},
             ]
         }
     )
@@ -196,6 +208,36 @@ app.get('/', function (req, res) {
     res.end();
 
 });
+/**
+Sending to Glass
+**/
+app.get('/glass', function (req, res) {
+    if (!oauth2Client.credentials) {
+        // generates a url that allows offline access and asks permissions
+        // for Mirror API scope.
+        var url = oauth2Client.generateAuthUrl({
+            access_type: 'offline',
+            scope: 'https://www.googleapis.com/auth/glass.timeline'
+        });
+        res.redirect(url);
+    } else {
+    googleapis
+        .discover('mirror', 'v1')
+        .execute(function (err, client) {
+            if (!!err) {
+                failure();
+                return;
+           }
+            console.log('mirror client', client);
+            insertBarcode(client, failure, success);
+        });
+    }
+    res.write('Glass Mirror API with Node');
+    res.end();
+
+});
+
+
 app.get('/oauth2callback', function (req, res) {
     // if we're able to grab the token, redirect the user back to the main page
     grabToken(req.query.code, failure, function () {
