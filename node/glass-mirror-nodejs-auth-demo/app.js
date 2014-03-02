@@ -90,7 +90,7 @@ var insertLocation = function (client, errorCallback, successCallback) {
                 "address": "599 Fairchild Dr, Mountain View, CA"
             },
             "menuItems": [
-                {"action":"NAVIGATE"},
+                {"action":"NAVIGAxTE"},
                 {"action": "REPLY"},
                 {"action": "DELETE"}
             ]
@@ -118,8 +118,8 @@ var insertBarcode = function (client, errorCallback, successCallback) {
                   "id": "complete",
                   "values": [{
                     "displayName": "Scan",
-                    "payload": "com.xtuple.glass.MainActivity",//"com.google.zxing.client.android.SCAN",
-                    "iconUrl": "://com.xtuple.glass.MainActivity"//"com.google.zxing.client.android.SCAN"
+                    "payload": "com.google.zxing.client.android.SCA",//"com.google.zxing.client.android.SCAN",
+                    "iconUrl": ""//"com.google.zxing.client.android.SCAN"
                   }]
                 },
                 {
@@ -127,9 +127,9 @@ var insertBarcode = function (client, errorCallback, successCallback) {
                   "id": "complete",
                   "values": [{
                     "displayName": "SanityCheck",
-                    "iconUrl": "http://google.com"
+                    "iconUrl": "http://mobile.xtuple.com"
                   }],
-                    "payload": "http://google.com"
+                    "payload": "http://mobile.xtuple.com "
                 },
                 {"action": "REPLY"},
                 {"action": "DELETE"},
