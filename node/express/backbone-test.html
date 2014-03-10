@@ -1,0 +1,88 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="http://documentcloud.github.com/underscore/underscore-min.js"></script>
+<script src="http://documentcloud.github.com/backbone/backbone-min.js"></script>
+<script>
+  // Your code goes here
+
+//model initalize
+var Todo = Backbone.Model.extend({
+	  initialize: function(){
+      console.log('This model has been initialized.');
+      },
+   	  defaults: {
+   	  name: 'first last',
+   	  age: 	'number',
+   	  picture: 'image'
+   	  }
+});
+
+// We can then create our own concrete instance of a (Todo) model
+// with no values at all:
+var todo1 = new Todo();
+// Following logs: {}
+console.log(JSON.stringify(todo1));
+
+// or with some arbitrary data:
+var todo2 = new Todo({
+  title: 'Check the attributes of both model instances in the console.',
+  completed: true
+});
+
+
+todo1.set({
+	name:  "Sam Winchester",
+	age: "25",
+	picture: "good_looking.png" 
+})
+
+// Following logs: {"title":"Check the attributes of both model instances in the console.","completed":true}
+console.log(JSON.stringify(todo2));
+
+
+// We create two DOM elements representing buttons
+// which could easily be containers or something else
+var button1 = $('<button></button>');
+var button2 = $('<button></button>');
+
+// Define a new view
+var View = Backbone.View.extend({
+      events: {
+        click: function(e) {
+          console.log(view.el === e.target);
+        }
+      }
+    });
+
+// Create a new instance of the view, applying it
+// to button1
+var view = new View({el: button1});
+
+// Apply the view to button2 using setElement
+view.setElement(button2);
+
+button1.trigger('click'); 
+button2.trigger('click'); // returns true
+
+
+// We can also provide raw markup to setElement
+// as follows (just to demonstrate it can be done):
+var view = new Backbone.View;
+view.setElement('<p><a><b>test</b></a></p>');
+view.$('a b').html(); // outputs "test"
+
+
+</script>
+
+<div id="testing">
+	<p></p>
+</div>
+</body>
+</html>
