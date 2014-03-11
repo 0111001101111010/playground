@@ -18,7 +18,13 @@ $("body").append(inject);
 });
 </script>
     </div>
-
+<div class="holdingDiv">
+  <form action="/file-upload" name="upload" class="dropzone dz-clickable" id="dropzoneArea" enctype="multipart/form-data" method = "post">
+    <input  type="file" name="theFile" />
+    <button id="uploadSubmitter" class="btn btn-primary btn-large" type="submit">Finished</button>
+  </form>
+</div>
+</div>
   </body>
   <script type="text/javascript" charset="utf-8">
 $(document).ready(function() {

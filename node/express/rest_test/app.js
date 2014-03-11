@@ -57,6 +57,42 @@ app.get('/second', function(req,res){
     ]
   });
 });
+/// Post files
+app.post('/upload', function(req, res) {
+
+	fs.readFile(req.files.image.path, function (err, data) {
+
+		var imageName = req.files.image.name;
+
+		/// If there's an error
+		if(!imageName){
+
+			console.log("There was an error");
+			res.redirect("/");
+			res.end();
+
+		} else {
+      var newPath = __dirname + "/uploads/fullsize/" + imageName;
+   /// write file to uploads/fullsize folder
+      fs.writeFile(newPath, data, function (err) {
+   /// let's see it
+      res.redirect("/uploads/fullsize/" + imageName);
+    });
+   }
+	});
+});
+
+app.post('/file-upload',function(req,res){
+    console.log('FIRST TEST: ' + JSON.stringify(req.files));
+    console.log('second TEST: ' +req.files.theFile.name);
+    fs.readFile(req.files.theFile.path, function (err, data) {
+        var newPath = "./uploads"+req.files.theFile.name;
+        console.log(newPath);
+        fs.writeFile(newPath, data, function (err) {
+          res.send("hi");
+        });
+    });
+});
 
 
 app.on('get',function(err,data){
