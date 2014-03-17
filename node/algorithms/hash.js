@@ -10,7 +10,7 @@ fs.readFile('macbeth.txt', 'utf8', function (err,data) {
   data = data.split(/\s+/);
   _.each(data,function(info){
      if (hash[info] === undefined)
-         hash[info] = 0;
+         hash[info] = 1;
      else
         hash[info]++;
   });
