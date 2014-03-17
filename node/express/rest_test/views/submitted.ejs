@@ -30,6 +30,7 @@ $("body").append(inject);
 $(document).ready(function() {
     $( "#target" ).click(function() {
       console.log("clicked");
+$("body").append("<li>more information!</li>");
           $.post( "ajax", function( data ) {
             $( ".result" ).html( data );
             console.log("something was clicked");
