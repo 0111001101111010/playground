@@ -9,8 +9,11 @@ fs.readFile('macbeth.txt', 'utf8', function (err,data) {
   }
   data = data.split(/\s+/);
   _.each(data,function(info){
-     console.log(info+"\n");
-     //if hash[info]
+     if (hash[info] === undefined)
+         hash[info] = 0;
+     else
+        hash[info]++;
   });
+  console.log(hash);
   //console.log(data);
 });
