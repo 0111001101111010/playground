@@ -14,6 +14,8 @@ fs.readFile('macbeth.txt', 'utf8', function (err,data) {
      else
         hash[info]++;
   });
+  //var sort = _.functions(hash);
   console.log(hash);
+  //console.log(hash);
   //console.log(data);
 });
