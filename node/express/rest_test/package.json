@@ -6,8 +6,9 @@
     "start": "node app.js"
   },
   "dependencies": {
-    "express": "~3.4.8",
     "ejs": "*",
-    "lodash": "~2.4.1"
+    "express": "~3.4.8",
+    "lodash": "~2.4.1",
+    "request": "^2.34.0"
   }
 }
