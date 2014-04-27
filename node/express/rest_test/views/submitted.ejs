@@ -1,0 +1,52 @@
+<%- include partial/header.ejs %>
+  <body>
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p>
+    <div id="target" class="btn btn-primary" href="localhost:3000/">
+      Click here
+    </div>
+    <div id="other" class="btn btn-primary">
+      Trigger the handler
+    </div>
+    <div class="container">
+<script>
+var test = <%- JSON.stringify(user) %>;
+console.log(test);
+_.each(test,function(data){
+  var inject = "<li>"+data.email+"</li>";
+$("body").append(inject);
+});
+</script>
+    </div>
+<div class="holdingDiv">
+  <form action="/file-upload" name="upload" class="dropzone dz-clickable" id="dropzoneArea" enctype="multipart/form-data" method = "post">
+    <input  type="file" name="theFile" />
+    <button id="uploadSubmitter" class="btn btn-primary btn-large" type="submit">Finished</button>
+  </form>
+</div>
+</div>
+  </body>
+  <script type="text/javascript" charset="utf-8">
+$(document).ready(function() {
+    $( "#target" ).click(function() {
+      console.log("clicked");
+$("body").append("<li>more information!</li>");
+          $.post( "ajax", function( data ) {
+            $( ".result" ).html( data );
+            console.log("something was clicked");
+          });
+    });
+    $( "#other").click(function(){
+      console.log("targetClick");
+      $.ajax({
+         type: "POST",
+         url: "ajax",
+         data: { taskid: 'info'},
+          success:function(rsp){
+            //do anything you want after a successful ajax request
+          }
+      });
+    })
+});
+  </script>
+</html>

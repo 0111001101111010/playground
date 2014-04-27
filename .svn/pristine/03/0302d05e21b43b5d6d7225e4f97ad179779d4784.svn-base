@@ -1,0 +1,40 @@
+0000000000000000000000000000000000000000 292b6238869d4935268203f234242673240499cf stanzheng <dev.stanzheng@gmail.com> 1387840884 -0500	initial pull
+292b6238869d4935268203f234242673240499cf 292b6238869d4935268203f234242673240499cf stanzheng <dev.stanzheng@gmail.com> 1387840896 -0500	checkout: moving from master to node
+292b6238869d4935268203f234242673240499cf 70d4a11bfa166b647001d46bfe9acfa0d5f1ab09 stanzheng <dev.stanzheng@gmail.com> 1387864868 -0500	commit: learnyounode
+70d4a11bfa166b647001d46bfe9acfa0d5f1ab09 5612fbdf50e48ddba1c81d0efc2092939212b77b stanzheng <dev.stanzheng@gmail.com> 1387914939 -0500	commit: progress
+5612fbdf50e48ddba1c81d0efc2092939212b77b d8c79477097305b48ca9064d3537afc11e2be535 stanzheng <dev.stanzheng@gmail.com> 1387984033 -0500	commit: what this was commited
+d8c79477097305b48ca9064d3537afc11e2be535 292b6238869d4935268203f234242673240499cf stanzheng <dev.stanzheng@gmail.com> 1388023482 -0500	checkout: moving from node to master
+292b6238869d4935268203f234242673240499cf d8c79477097305b48ca9064d3537afc11e2be535 stanzheng <dev.stanzheng@gmail.com> 1388023496 -0500	checkout: moving from master to node
+d8c79477097305b48ca9064d3537afc11e2be535 51b6cc58f3e2d08f56dbd2f1529e7f9dc55e70c7 stanzheng <dev.stanzheng@gmail.com> 1388023500 -0500	commit: sync
+51b6cc58f3e2d08f56dbd2f1529e7f9dc55e70c7 292b6238869d4935268203f234242673240499cf stanzheng <dev.stanzheng@gmail.com> 1388023519 -0500	checkout: moving from node to master
+292b6238869d4935268203f234242673240499cf 292b6238869d4935268203f234242673240499cf stanzheng <dev.stanzheng@gmail.com> 1388023609 -0500	checkout: moving from master to python
+292b6238869d4935268203f234242673240499cf 13f8fae721643710c0318ae9baf4a7c3aa785001 stanzheng <dev.stanzheng@gmail.com> 1388023709 -0500	commit: init commit
+13f8fae721643710c0318ae9baf4a7c3aa785001 51b6cc58f3e2d08f56dbd2f1529e7f9dc55e70c7 stanzheng <dev.stanzheng@gmail.com> 1388023780 -0500	checkout: moving from python to node
+51b6cc58f3e2d08f56dbd2f1529e7f9dc55e70c7 f6fa1e5ad6be6cbf9c745d0bf8defe111d11d820 stanzheng <dev.stanzheng@gmail.com> 1388023806 -0500	commit: moved directories
+f6fa1e5ad6be6cbf9c745d0bf8defe111d11d820 81a7ae47bc934c6dc696413b57d7a9b19c2f86f1 stanzheng <dev.stanzheng@gmail.com> 1388023831 -0500	commit: moved directories
+81a7ae47bc934c6dc696413b57d7a9b19c2f86f1 555d1a08ad6880902f9418da627bed117d5f2369 stanzheng <dev.stanzheng@gmail.com> 1388112582 -0500	commit: more commits
+555d1a08ad6880902f9418da627bed117d5f2369 d1ed28482f9ab885bc3d6369ff76d15702c173ec stanzheng <dev.stanzheng@gmail.com> 1388127934 -0500	commit: stuff
+d1ed28482f9ab885bc3d6369ff76d15702c173ec 14e3b30b699a42e9b19a44374148b439060ab139 stanzheng <dev.stanzheng@gmail.com> 1388201937 -0500	commit: stream-adventure
+14e3b30b699a42e9b19a44374148b439060ab139 92356aba70e1e0ce76a413af77896352f08b8fe3 stanzheng <dev.stanzheng@gmail.com> 1388295198 -0500	commit: bytewiser
+92356aba70e1e0ce76a413af77896352f08b8fe3 19a669220cc3b149ac7ca7cffd2956cf3a89cdd8 stanzheng <dev.stanzheng@gmail.com> 1388376362 -0500	commit: updating name:
+19a669220cc3b149ac7ca7cffd2956cf3a89cdd8 3ef276ad5af79f57af4ebb0d9d6168252f33b885 stanzheng <dev.stanzheng@gmail.com> 1388376681 -0500	commit: new .ignore
+3ef276ad5af79f57af4ebb0d9d6168252f33b885 507653f9b54c3533464b4b09067e0424bb49b6c6 stanzheng <dev.stanzheng@gmail.com> 1388518142 -0500	commit: not comitting the node_modules anymore
+507653f9b54c3533464b4b09067e0424bb49b6c6 af3db721930405df599c820d00c1bf9ce266f0b2 stanzheng <dev.stanzheng@gmail.com> 1388638758 -0500	commit: more stuff
+af3db721930405df599c820d00c1bf9ce266f0b2 85e86082098acf7161064236ebb5c3a40823b39c stanzheng <dev.stanzheng@gmail.com> 1388739423 -0500	commit: more stuff
+85e86082098acf7161064236ebb5c3a40823b39c c881cd374aa686d995a4cdd16a5f33a0c60cda79 stanzheng <dev.stanzheng@gmail.com> 1388813018 -0500	commit: new commit
+c881cd374aa686d995a4cdd16a5f33a0c60cda79 6bbe9ae92eb4f418d132dc59100c731f565a9985 stanzheng <dev.stanzheng@gmail.com> 1388818260 -0500	commit: morved around files
+6bbe9ae92eb4f418d132dc59100c731f565a9985 d28f5f66e5b5ff4a4aaebf6558e7f352c31a23c1 stanzheng <dev.stanzheng@gmail.com> 1389205833 -0500	commit: edit the ignores
+d28f5f66e5b5ff4a4aaebf6558e7f352c31a23c1 13f8fae721643710c0318ae9baf4a7c3aa785001 stanzheng <dev.stanzheng@gmail.com> 1389205847 -0500	checkout: moving from node to python
+13f8fae721643710c0318ae9baf4a7c3aa785001 d28f5f66e5b5ff4a4aaebf6558e7f352c31a23c1 stanzheng <dev.stanzheng@gmail.com> 1389205910 -0500	checkout: moving from python to node
+d28f5f66e5b5ff4a4aaebf6558e7f352c31a23c1 ad8daa1477ce3bf656099b81fa80a85c9b473d26 stanzheng <dev.stanzheng@gmail.com> 1389279575 -0500	commit: cleaning up file sys
+ad8daa1477ce3bf656099b81fa80a85c9b473d26 1c3ff5274d04627a805e03e012cb893c898c0753 stanzheng <dev.stanzheng@gmail.com> 1389495267 -0500	commit: sync
+1c3ff5274d04627a805e03e012cb893c898c0753 292b6238869d4935268203f234242673240499cf stanzheng <dev.stanzheng@gmail.com> 1389583496 -0500	checkout: moving from node to master
+292b6238869d4935268203f234242673240499cf 1c3ff5274d04627a805e03e012cb893c898c0753 stanzheng <dev.stanzheng@gmail.com> 1389583748 -0500	checkout: moving from master to node
+1c3ff5274d04627a805e03e012cb893c898c0753 8c4dafec95e106de1c22162aadeef9bee45f04a2 stanzheng <dev.stanzheng@gmail.com> 1389583756 -0500	commit: google apis
+8c4dafec95e106de1c22162aadeef9bee45f04a2 32a985e71b95646bc60fba05ae8cd24b5106337f stanzheng <dev.stanzheng@gmail.com> 1389583856 -0500	commit: deleted
+32a985e71b95646bc60fba05ae8cd24b5106337f 25c609d4716b8cab538c835cbc4bb7150ddc1888 stanzheng <dev.stanzheng@gmail.com> 1390578863 -0500	commit: the world
+25c609d4716b8cab538c835cbc4bb7150ddc1888 292b6238869d4935268203f234242673240499cf stanzheng <dev.stanzheng@gmail.com> 1390578878 -0500	checkout: moving from node to master
+292b6238869d4935268203f234242673240499cf 292b6238869d4935268203f234242673240499cf stanzheng <dev.stanzheng@gmail.com> 1390578895 -0500	checkout: moving from master to java
+292b6238869d4935268203f234242673240499cf 054656ae66d9dd215bb50f85f4e6ddf20a38596d stanzheng <dev.stanzheng@gmail.com> 1390595216 -0500	commit: adeing java
+054656ae66d9dd215bb50f85f4e6ddf20a38596d a70e6cc65df7edb80ec07a9ec08263ff6ddea2e0 stanzheng <dev.stanzheng@gmail.com> 1390755419 -0500	commit: add http and snippets
+a70e6cc65df7edb80ec07a9ec08263ff6ddea2e0 f9d141c02fe1ab657b146875b705ca9d7e1d7076 stanzheng <dev.stanzheng@gmail.com> 1390760416 -0500	commit: add http and snippets
