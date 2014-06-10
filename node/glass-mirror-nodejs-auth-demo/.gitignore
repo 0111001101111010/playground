@@ -1,7 +1,0 @@
-.idea
-.idea/*
-*.iml
-*swp
-node_modules
-config.json
-node.pid
