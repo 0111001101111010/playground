@@ -1,0 +1,22 @@
+{
+  "name": "playground",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/stanzheng/testing.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/stanzheng/testing/issues"
+  },
+  "homepage": "https://github.com/stanzheng/testing",
+  "dependencies": {
+    "mocha": "^1.20.1"
+  }
+}
