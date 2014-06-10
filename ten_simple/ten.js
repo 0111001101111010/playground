@@ -3,6 +3,6 @@
 
 module.export=ten;
 
-function ten(){
-  return 1;
-}
+var ten = {
+  "foo":10
+};
