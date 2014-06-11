@@ -23,5 +23,8 @@
       return c;
     }
   };
+  module.exports.C = function(){
+
+  };
   return exports;
 }());
