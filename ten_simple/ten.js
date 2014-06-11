@@ -1,8 +1,12 @@
 /*jslint node: true */
-"use strict";
+(function () {
+  'use strict';
 
-module.export=ten;
+  var A = function(){
+    return 10;
+  };
+  module.exports.A = A;
+  module.exports.B = 11;
 
-var ten = {
-  "foo":10
-};
+  return exports;
+}());
