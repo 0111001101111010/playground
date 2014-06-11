@@ -2,11 +2,18 @@
 (function () {
   'use strict';
 
-  var A = function(){
+  module.exports.A = function(a,b){
+    if(a>b){
+      return a;
+    }
+    else{
+      return b;
+    }
+  };
+
+  //
+  module.exports.B = function(){
     return 10;
   };
-  module.exports.A = A;
-  module.exports.B = 11;
-
   return exports;
 }());
