@@ -10,8 +10,18 @@ describe('Exercise 1', function(){
         });
   });
   describe('B > A', function(){
-        it('Given 6 & 5', function(){
+        it('Given 4 & 5', function(){
           assert.equal(ten.A(4,5),5,'5 is larger');
+        });
+  });
+  describe('A == B', function(){
+        it('Given 5 & 5', function(){
+          assert.equal(ten.A(5,5),5,'5 is larger');
+        });
+  });
+  describe('Handles Integers?', function(){
+        it('Given 5 & 5.5', function(){
+          assert.equal(ten.A(5,5.5),5.5,'4 is larger');
         });
   });
 });
