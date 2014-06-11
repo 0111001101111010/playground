@@ -1,4 +1,7 @@
 var assert = require('chai').assert;
+var should = require('chai').should;
+var expect = require('chai').expect();
+
 var ten = require('../ten');
 
 describe('Exercise 1', function(){
@@ -42,6 +45,16 @@ describe('Exercise 2', function(){
   describe('2A,1B,3C', function(){
         it('Given ABC', function(){
           assert.equal(ten.B(6,3,9),9,'C is largest');
+        });
+  });
+});
+
+
+describe('Exercise 3', function(){
+
+  describe('3A,2B,1C', function(){
+        it('Given ABC', function(){
+          assert.equal(ten.B(3,2,1),3,'A is largest');
         });
   });
 });
