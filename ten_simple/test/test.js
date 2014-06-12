@@ -1,6 +1,7 @@
+ /*jshint expr:true */
 var assert = require('chai').assert;
-var should = require('chai').should;
-var expect = require('chai').expect();
+var should = require('chai').should();
+var expect = require('chai').expect;
 
 var ten = require('../ten');
 
@@ -52,9 +53,16 @@ describe('Exercise 2', function(){
 
 describe('Exercise 3', function(){
 
-  describe('3A,2B,1C', function(){
-        it('Given ABC', function(){
-          assert.equal(ten.B(3,2,1),3,'A is largest');
+  describe('Given a Vowel ', function(){
+        it('A should be true', function(){
+          var val =ten.C('a');
+          expect(val).to.be.true;
+        });
+  });
+  describe('Given a Vowel ', function(){
+        it('B should be false', function(){
+          var val =ten.C('b');
+          expect(val).to.be.false;
         });
   });
 });

@@ -1,6 +1,7 @@
 /*jslint node: true */
 (function () {
   'use strict';
+  var _ = require('lodash');
 
   module.exports.A = function(a,b){
     if(a>b){
@@ -23,10 +24,16 @@
       return c;
     }
   };
-  module.exports.C = function(){
-      console.log("foo");
-      console.log("bar");
-      console.log("batz");
+  module.exports.C = function(letter){
+    var vowels = ['a','e','i','o','u'];
+    var state = false;
+    _.each(vowels, function(compare){
+      if (compare === letter){
+        state = true;
+        return;
+      }
+    });
+    return state;
   };
   return exports;
 }());
