@@ -65,4 +65,18 @@ describe('Exercise 3', function(){
           expect(val).to.be.false;
         });
   });
+
 });
+ describe('Exercise 4', function() {
+   describe('Given a word bar', function() {
+     it('should return bobaror', function() {
+       assert.equal(ten.D("bar"), "bobaror");
+     });
+   });
+   describe('Given a word ooo', function() {
+     assert.equal(ten.D('ooo'), 'ooo');
+   });
+   describe('Given two words ', function() {
+     assert.equal("foo bar", "fofoo bobaror");
+   });
+ });

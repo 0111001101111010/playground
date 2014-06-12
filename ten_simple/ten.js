@@ -35,5 +35,21 @@
     });
     return state;
   };
+
+  module.exports.D = function(phrase){
+    var vowels = ['a','e','i','o','u'];
+    var processedPhrase = '';
+    _.each(phrase, function(letter){
+
+      if ( !(_.contains(vowels,letter)) ){
+        processedPhrase+=letter+'o'+letter;
+      }
+      else {
+        processedPhrase+=letter;
+      }
+    });
+    return processedPhrase;
+  };
+
   return exports;
 }());
