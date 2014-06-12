@@ -6,6 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "scripts":{
+   "test": "node_modules/.bin/mocha -R spec ten_simple/test"
+  },
   "repository": {
     "type": "git",
     "url": "git://github.com/stanzheng/testing.git"
