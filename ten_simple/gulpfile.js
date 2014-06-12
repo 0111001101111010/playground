@@ -10,5 +10,5 @@ gulp.task('mocha', function() {
         .on('error', gutil.log);
 });
 gulp.task('watch-mocha', function() {
-    gulp.watch(['lib/**', 'test/**'], ['mocha']);
+    gulp.watch(['ten.js', 'test/**'], ['mocha']);
 });

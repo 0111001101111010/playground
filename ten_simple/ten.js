@@ -24,7 +24,9 @@
     }
   };
   module.exports.C = function(){
-
+      console.log("foo");
+      console.log("bar");
+      console.log("batz");
   };
   return exports;
 }());
