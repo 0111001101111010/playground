@@ -50,6 +50,28 @@
     });
     return processedPhrase;
   };
+  // module.exports.E = {
+  //   add: function(array){
+  //     return _.reduce(array,function (a,b) {
+  //       return (a+b);
+  //     });
+  //   },
+  //   multiple: function(array){
+  //     return _.reduce(array,function (a,b) {
+  //       return (a*b);
+  //     });
+  //   }
+  // };
+  module.exports.E = function(array){
+      return _.reduce(array,function (a,b) {
+        return (a+b);
+      });
+    };
+  module.exports.F = function(array){
+      return _.reduce(array,function (a,b) {
+        return (a*b);
+      });
+    };
 
   return exports;
 }());
