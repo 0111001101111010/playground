@@ -82,3 +82,12 @@ describe('Exercise 3', function(){
    //
   //  });
  });
+
+ describe('Exercise 5', function() {
+   describe('Adding', function() {
+     assert.equal(ten.E([1,2,3,4]), 10);
+   });
+   describe('Multiplying', function() {
+     assert.equal(ten.F([1,2,3,4]), 24);
+   });
+ });
