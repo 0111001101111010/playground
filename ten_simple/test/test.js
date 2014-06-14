@@ -99,3 +99,15 @@ describe('Exercise 6', function() {
     assert.equal(ten.G("foo bar"), "rab oof");
   });
 });
+
+describe('Exercise8', function() {
+  it('animal list, [dog,bird,elephant]', function() {
+    assert.equal(ten.longestWord(["dog","bird","elephant"]), "elephant");
+  });
+  it('friend list, [lookmais,patrick,trisha]', function() {
+    assert.equal(ten.longestWord(["lookmais","patrick","trisha"]), "lookmais");
+  });
+  it('friend list, [bob,stu]', function() {
+    assert.equal(ten.longestWord(["bob","stu"]), "bob");
+  });
+});
