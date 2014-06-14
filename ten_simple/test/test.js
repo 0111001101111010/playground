@@ -111,3 +111,15 @@ describe('Exercise8', function() {
     assert.equal(ten.longestWord(["bob","stu"]), "bob");
   });
 });
+
+describe('Exercise8', function() {
+  it('animal list, [dog,bird,elephant]', function() {
+    assert.deepEqual(ten.filterSize(4,["dog","bird","elephant"]), ["bird","elephant"]);
+  });
+  it('friend list, [lookmais,patrick,trisha]', function() {
+    assert.deepEqual(ten.filterSize(6,["lookmais","patrick","trisha"]), ["lookmais","patrick","trisha"]);
+  });
+  it('friend list, [bob,stu]', function() {
+    assert.deepEqual(ten.filterSize(4,["bob","stu"]), []);
+  });
+});
