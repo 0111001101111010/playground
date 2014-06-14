@@ -90,5 +90,15 @@
     return largest;
   };
 
+module.exports.filterSize = function (size,list) {
+  var filtered =[];
+  _.each(list,function(word){
+      if(word.length>=size){
+        filtered.push(word);
+      }
+  });
+  return filtered;
+};
+
   return exports;
 }());
