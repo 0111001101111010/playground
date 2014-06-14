@@ -80,6 +80,15 @@
     });
     return reverse;
   };
+  module.exports.longestWord = function (list) {
+    var largest = "";
+    _.each(list,function(word){
+        if(word.length>largest.length){
+          largest=word;
+        }
+    });
+    return largest;
+  };
 
   return exports;
 }());
