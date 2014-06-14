@@ -90,3 +90,12 @@ describe('Exercise 5', function() {
     assert.equal(ten.F([1,2,3,4]), 24);
   });
 });
+
+describe('Exercise 6', function() {
+  it('when given god', function() {
+    assert.equal(ten.G("dog"), "god");
+  });
+  it('when given foo bar', function() {
+    assert.equal(ten.G("foo bar"), "rab oof");
+  });
+});

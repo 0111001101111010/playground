@@ -72,6 +72,14 @@
         return (a*b);
       });
     };
+    //reverse word function
+  module.exports.G = function (phrase) {
+    var reverse = "";
+    _.each(phrase, function (letter) {
+      reverse = letter+reverse;
+    });
+    return reverse;
+  };
 
   return exports;
 }());
