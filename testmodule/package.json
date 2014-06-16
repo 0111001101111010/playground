@@ -1,0 +1,40 @@
+{
+  "name": "testmodule",
+  "description": "The best module ever.",
+  "version": "0.0.0",
+  "homepage": "user/repo",
+  "bugs": "user/repo/issues",
+  "license": "MIT",
+  "main": "lib/testmodule.js",
+  "author": {
+    "name": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "user/repo"
+  },
+  "keywords":[],
+  "dependencies": {
+    "lodash": "2.4.1",
+    "q": "2.0.2",
+    "debug": "1.0.2"
+  },
+  "devDependencies": {
+    "gulp": "^3.6.2",
+    "gulp-util": "2.2.16",
+    "gulp-bump": "^0.1.8",
+    "gulp-jscs": "^0.4.2",
+    "gulp-jshint": "^1.5.5",
+    "gulp-mocha": "^0.4.1",
+    "gulp-istanbul": "^0.2.0",
+    "coveralls": "^2.10.0",
+    "should": "^3.3.1",
+    "jshint-stylish": "^0.2.0",
+    "gulp-load-plugins": "^0.5.1",
+    "gulp-plumber": "^0.6.2"
+  },
+  "scripts": {
+    "coveralls": "gulp test && cat coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
+    "test": "gulp test"
+  }
+}
