@@ -99,6 +99,17 @@ module.exports.filterSize = function (size,list) {
   });
   return filtered;
 };
+//http://davidwalsh.name/javascript-unique-letters-string
+module.exports.unicharFreq = function (string) {
+  var str = "hellodavidthisisatestofobjectusage";
+  var uniq = "";
+
+  for (var i = 0; i< str.length; i++) {
+      if(uniq.indexOf( str[i] ) == -1)
+        uniq += str[i];
+      }
+  return uniq.length;
+  };
 
   return exports;
 }());
