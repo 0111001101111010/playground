@@ -3,6 +3,22 @@
 var gulp = require('gulp');
 var mocha = require('gulp-mocha');
 var gutil = require('gulp-util');
+var istanbul = require('gulp-istanbul');
+
+gulp.task('test', function (cb) {
+  gulp.src(['ten.js'])
+    .pipe(istanbul()) // Covering files
+    .on('finish', function () {
+      gulp.src(['test/*.js'])
+        .pipe(mocha())
+        .pipe(istanbul.writeReports()) // Creating the reports after tests runned
+        .on('end', cb);
+    });
+});
+
+gulp.task('watch-test', function() {
+     gulp.watch(['ten.js', 'test/**'], ['test']);
+});
 
 gulp.task('mocha', function() {
     return gulp.src(['test/*.js'], { read: false })
