@@ -1,4 +1,3 @@
- /*jshint expr:true */
 var assert = require('chai').assert;
 var should = require('chai').should();
 var expect = require('chai').expect;
