@@ -15,6 +15,6 @@ func main() {
 	fmt.Println(output)
 }
 
-func percentage(input float64) {
+func percentage(input float64) float64 {
 	return 1.0 + input
 }
