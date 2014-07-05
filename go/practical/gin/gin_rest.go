@@ -1,6 +1,9 @@
 package main
 
-import "github.com/gin-gonic/gin"
+import (
+	"fmt"
+	"github.com/gin-gonic/gin"
+)
 
 func main() {
 	// Creates a gin router + logger and recovery (crash-free) middlewares
@@ -14,4 +17,20 @@ func main() {
 
 	// Listen and server on 0.0.0.0:8080
 	r.Run(":8080")
+}
+
+func getting(c gin.Context) {
+
+}
+func posting(c gin.Context) {
+
+}
+func putting(c gin.Context) {
+
+}
+func deleting(c gin.Context) {
+
+}
+func patching(c gin.Context) {
+
 }
