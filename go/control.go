@@ -11,7 +11,7 @@ func main() {
 	}
 
 	for _, key := range x {
-		fmt.Printf("The number is %d\n", key)
+		fmt.Printf("The number is %v\n", key)
 	}
 	highest := 0
 	for _, key := range x {
@@ -19,5 +19,5 @@ func main() {
 			highest = key
 		}
 	}
-	fmt.Printf("The highest number is %d", highest)
+	fmt.Printf("The highest number is %v\n", highest)
 }
