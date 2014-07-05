@@ -33,6 +33,11 @@ func main() {
 		sum += sum
 	}
 	fmt.Println(sum)
-
+	//short short
+	sum := 1
+	for sum < 1000 {
+		sum += sum
+	}
+	fmt.Println(sum)
 	fmt.Printf("The highest number is %v\n", highest)
 }
