@@ -19,8 +19,14 @@ func main() {
 			highest = key
 		}
 	}
-	//ommit
+	//long form
+	sum := 0
+	for i := 0; i < 10; i++ {
+		sum += i
+	}
+	fmt.Println(sum)
 
+	//shortform
 	sum := 1
 	for sum < 1000 {
 		fmt.Println(sum)
