@@ -19,5 +19,14 @@ func main() {
 			highest = key
 		}
 	}
+	//ommit
+
+	sum := 1
+	for sum < 1000 {
+		fmt.Println(sum)
+		sum += sum
+	}
+	fmt.Println(sum)
+
 	fmt.Printf("The highest number is %v\n", highest)
 }
