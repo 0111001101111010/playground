@@ -11,6 +11,12 @@ function Bob() {
     if ((string[phrase.length-1]) === '?') {
       return "Sure.";
     }
+    else if ((string[phrase.length-1]) === '!') {
+      return "Woah, chill out!";
+    }
+    else if (phrase.length === 0) {
+      return "Fine. Be that way!";
+    }
     else{
       return "Whatever.";
     }

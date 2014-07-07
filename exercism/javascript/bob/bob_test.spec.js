@@ -23,7 +23,7 @@ describe("Bob", function() {
     expect(result).toEqual('Whatever.');
   });
 
-  xit("using acronyms in regular speech", function() {
+  it("using acronyms in regular speech", function() {
     var result = bob.hey("It's OK if you don't want to go to the DMV.");
     expect(result).toEqual('Whatever.');
   });
@@ -33,22 +33,22 @@ describe("Bob", function() {
     expect(result).toEqual('Woah, chill out!');
   });
 
-  xit("shouting numbers", function() {
+  it("shouting numbers", function() {
     var result = bob.hey('1, 2, 3 GO!');
     expect(result).toEqual('Woah, chill out!');
   });
 
-  xit("only numbers", function() {
+  it("only numbers", function() {
     var result = bob.hey('1, 2, 3');
     expect(result).toEqual('Whatever.');
   });
 
-  xit("question with only numbers", function() {
+  it("question with only numbers", function() {
     var result = bob.hey('4?');
     expect(result).toEqual('Sure.');
   });
 
-  xit("shouting with special characters", function() {
+  it("shouting with special characters", function() {
     var result = bob.hey('ZOMG THE %^*@#$(*^ ZOMBIES ARE COMING!!11!!1!');
     expect(result).toEqual('Woah, chill out!');
   });
