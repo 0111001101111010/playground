@@ -4,8 +4,9 @@ var _ = require('lodash');
 
 function words(string) {
   var count = {};
-  var split = string.split(' ');
-  _.each(split, function (word) {
+  string = String(string).match(/\w+\b/gi,' ');
+  _.each(string, function (word) {
+    word = word.toLowerCase();
     if (count.hasOwnProperty(word)){
       count[word]++;
     }

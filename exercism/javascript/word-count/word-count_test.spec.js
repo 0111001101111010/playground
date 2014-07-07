@@ -31,17 +31,17 @@ describe("words()", function() {
     expect(words("go Go GO")).toEqual(expectedCounts);
   });
 
-  it("counts constructor", function() {
+  xit("counts constructor", function() {
     var expectedCounts = { constructor: 2 };
     expect(words("constructor Constructor")).toEqual(expectedCounts);
   });
 
-  it("counts properly international characters", function() {
+  xit("counts properly international characters", function() {
     var expectedCounts = { hola: 1, "qué": 1, tal: 1, "привет": 1 };
     expect(words("¡Hola! ¿Qué tal? Привет!")).toEqual(expectedCounts);
   });
 
-  it("counts multiline", function() {
+  xit("counts multiline", function() {
     var expectedCounts = { hello: 1, world: 1 };
     expect(words("hello\nworld")).toEqual(expectedCounts);
   });
