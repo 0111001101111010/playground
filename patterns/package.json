@@ -1,0 +1,11 @@
+{
+  "name": "factor-pattern",
+  "version": "0.0.0",
+  "description": "factory module pattern",
+  "main": "app.js",
+  "scripts": {
+    "test": "node app.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
