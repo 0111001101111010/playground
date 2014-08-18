@@ -37,6 +37,39 @@ $(function(){
   });
   //view
   var TodoView = Backbone.View.extend({
-    //
+    tagName: "li",
+    template: _.template($('#item-template').html()),
+    events:{
+      "click .toggle"   : "toggleDone",
+      "dblclick .view"  : "edit",
+      "click a.destroy" : "clear",
+      "keypress .edit"  : "updateOnEnter",
+      "blur .edit"      : "close"
+    },
+
+    initialize: function () {
+      this.listenTo(this.model, 'change', this.render);
+      this.listenTo(this.model, 'destroy, this.remove');
+    },
+
+    render: function () {
+          this.$el.html(this.template(this.model.toJSON()));
+          this.$el.toggleClass('done', this.model.get('done'));
+          this.input = this.$('.edit');
+          return this;
+    },
+
+    toggleDone: function () {
+      this.model.toggle();
+    },
+
+    edit: function () {
+      this.$el.addClass('editing');
+      this.input.focus();
+    },
+
+    close: function () {
+      var value = this.input.val();
+    }
   });
 });
