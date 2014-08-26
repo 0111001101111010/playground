@@ -1,26 +1,24 @@
-// include the Lo-Dash library
+'use strict';
+
 var _ = require("lodash");
 
-var worker = function(users) {
-    // do work; return stuff
-    var summary = [];
+var commentcount = function (comments) {
 
-    _.each(users, function(user){
-      if (_.contains(summary, user)){
-        summary.comment_count++;
-      }
-      else(
-        summary.push({
-          username:user,
-          comment_count:1
-        })
-      );
+    var counted = [];
+
+    // Group by article
+    comments = _.groupBy(comments, 'username');
+
+    _.forEach(comments, function (item, name) {
+
+        counted.push({
+            username: name,
+            comment_count: _.size(item)
+        });
     });
-    _.sortBy(users, function(user){
-      return -user.comment_count;
-    });
-    return summary;
+
+    return _.sortBy(counted, "comment_count").reverse();
+
 };
 
-// export the worker function as a nodejs module
-module.exports = worker;
+module.exports = commentcount;
