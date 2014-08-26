@@ -21,6 +21,7 @@ Please write a function that:
 // include the Lo-Dash library
 var _ = require("lodash");
 
+//aggregate same keys and then aggregate those values
 var worker = function(orders) {
   //define the overview
   var overviewarray = [],

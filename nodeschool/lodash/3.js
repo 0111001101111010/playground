@@ -2,20 +2,22 @@
 
 var _ = require("lodash");
 
+// iterate over an object
+// summarize something about the object
 var addsizetyp = function (item) {
 
-    _.forEach(item, function (value, key) {
+  _.each(item, function (value, key) {
 
-        if (value.population > 1) {
-            item[key].size = "big";
-        } else if (value.population > 0.5) {
-            item[key].size = "med";
-        } else {
-            item[key].size = "small";
-        }
-    });
+      if (value.population > 1) {
+          item[key].size = "big";
+      } else if (value.population > 0.5) {
+          item[key].size = "med";
+      } else {
+          item[key].size = "small";
+      }
+  });
 
-    return item;
+  return item;
 };
 
 module.exports = addsizetyp;

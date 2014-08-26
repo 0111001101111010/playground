@@ -2,6 +2,8 @@
 
 var _ = require("lodash");
 
+
+//aggregate values and then count those
 var commentcount = function (comments) {
 
     var counted = [];

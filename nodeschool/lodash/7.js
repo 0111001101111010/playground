@@ -10,6 +10,7 @@
 // include the Lo-Dash library
 var _ = require("lodash");
 
+//filter amounts
 var worker = function(freelancers) {
 
    freelancers = _.sortBy(freelancers, "income");
