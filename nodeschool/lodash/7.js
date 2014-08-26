@@ -11,21 +11,24 @@
 var _ = require("lodash");
 
 var worker = function(freelancers) {
-    var summary = {}, average = 0;
+
+   freelancers = _.sortBy(freelancers, "income");
+    var underperform, overperform, average = 0;
     // do work; return stuff
-     _.each(freelancers, function (item,key) {
-        average = _.reduce(item, function (sum,item){
-          return sum + item.income;
-        });
+    average = _.reduce(freelancers, function (sum,value){
+      return sum + value.income;
     },0);
+    average = average/freelancers.length;
 
-    _.filter(freelancers, function (income) {
-      if (income>average){
-
-
-      }
+    overperform = _.filter(freelancers, function (agent) { return agent.income > average;
     });
-    return summary;
+    underperform = _.filter(freelancers, function (agent) { return agent.income <= average;
+    });
+    return {
+      average: average,
+      underperform: underperform,
+      overperform: overperform
+    };
 };
 
 // export the worker function as a nodejs module
