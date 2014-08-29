@@ -1,17 +1,47 @@
 var q = require('q');
 
-var d1 = q.defer;
-var d2 = q.defer;
+//declare two promises
+var def1 = q.defer();
+var def2 = q.defer();
 
+function all (prom1, prom2) {
 
-
-var all = function (p1,p2){
-  var defer = q.defer;
-  var counter = 0;
-  var increment = function (result) {
-    ++counter;
-  };
-
+//declare a group defined promise
+  var groupDef = q.defer(),
+      counter = 0,
+      val1,
+      val2;
+var increment = function (result,val) {
+  val = result;
+  ++counter;
+  if (counter >=2){
+     groupDef.resolve([val1, val2]);
+  }
 };
+//go first promise to increment value
+//#QUESTION when is result defined, or is that the definition
+  prom1
+  .then(increment(result,val1))
+  .then(null, groupDef.reject)
+  .done();
 
-all(p1,p2);
+  prom2
+  .then(function (result) {
+    val2 = result;
+    ++counter;
+    if (counter >=2) groupDef.resolve([val1, val2]);
+  })
+  .then(null, groupDef.reject)
+  .done();
+
+  return groupDef.promise;
+}
+
+all(def1.promise, def2.promise)
+.then(console.log)
+.done();
+
+setTimeout(function () {
+  def1.resolve("PROMISES");
+  def2.resolve("FTW");
+}, 200);

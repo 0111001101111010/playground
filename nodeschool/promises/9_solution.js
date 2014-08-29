@@ -1,8 +1,12 @@
 var q = require('q');
+
+//declare two promises
 var def1 = q.defer();
 var def2 = q.defer();
 
 function all (prom1, prom2) {
+
+//declare a group defined promise
   var groupDef = q.defer(),
       counter = 0,
       val1,
