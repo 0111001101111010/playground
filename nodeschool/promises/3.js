@@ -1,4 +1,9 @@
 var q = require('q');
 var defer = q.defer();
 
-defer.promise.then(null, console.log, console.log);
+defer.promise.then(console.log, console.log);
+
+///uhh?
+
+defer.resolve("I FIRED");
+defer.reject("I DID NOT FIRE");
