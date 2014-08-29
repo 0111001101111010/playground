@@ -22,4 +22,4 @@ q.fcall(iterate,1)
  .then(iterate)
  .then(iterate)
  .then(throwMyGod)
- .done(console.log);
+ .done(sconsole.log);
