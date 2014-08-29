@@ -19,4 +19,4 @@ var attachTitle = function attachTitle (name){
 
 defer.promise.then(attachTitle).then(console.log);
 
-defer.resolve("MAHATTAN");
+defer.resolve("MANHATTAN");
