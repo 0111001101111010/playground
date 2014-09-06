@@ -55,3 +55,21 @@ var Comment = React.createClass({
     );
   }
 });
+
+var HelloWorld = React.createClass({
+  render: function() {
+    return (
+      <p>
+        Hello, <input type="text" placeholder="Welcome user.." />!
+        It is {this.props.date.toTimeString()}
+      </p>
+    );
+  }
+});
+
+setInterval(function() {
+  React.renderComponent(
+    <HelloWorld date={new Date()} />,
+    document.getElementById('example')
+  );
+}, 500);
