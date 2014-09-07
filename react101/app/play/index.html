@@ -5,6 +5,7 @@
   </head>
   <body>
     <div id="example"></div>
+    <div id="input"></div>
     </body>
 <script src="http://fb.me/react-0.11.1.js"></script>
 <script src="http://fb.me/JSXTransformer-0.11.1.js"></script>
@@ -16,6 +17,7 @@ var LikeButton = React.createClass({
     return {liked: false};
   },
   handleClick: function(event) {
+    console.log(event);
     this.setState({liked: !this.state.liked});
   },
   render: function() {
@@ -31,6 +33,36 @@ var LikeButton = React.createClass({
 React.renderComponent(
   <LikeButton />,
   document.getElementById('example')
+);
+
+ var App = React.createClass({
+    getInitialState: function() {
+      return {userInput: ''};
+    },
+    handleChange: function(e) {
+      this.setState({userInput: e.target.value});
+    },
+    clearAndFocusInput: function() {
+      this.setState({userInput: ''}); // Clear the input
+      // We wish to focus the <input /> now!
+    },
+    render: function() {
+      return (
+        <div>
+          <div onClick={this.clearAndFocusInput}>
+            Click to Focus and Reset
+          </div>
+          <input
+            value={this.state.userInput}
+            onChange={this.handleChange}
+          />
+        </div>
+      );
+    }
+  });
+React.renderComponent(
+  <App />,
+  document.getElementById('input')
 );
 </script>
 
