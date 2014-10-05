@@ -22,19 +22,19 @@ describe('Hamming', function () {
     expect(compute('GGACG', 'GGTCG')).toEqual(1);
   });
 
-  xit('ignores extra length on first strand when longer', function () {
+  it('ignores extra length on first strand when longer', function () {
     expect(compute('AAAG', 'AAA')).toEqual(0);
   });
 
-  xit('ignores extra length on other strand when longer', function () {
+  it('ignores extra length on other strand when longer', function () {
     expect(compute('AAA', 'AAAG')).toEqual(0);
   });
 
-  xit('large hamming distance', function () {
+  it('large hamming distance', function () {
     expect(compute('GATACA', 'GCATAA')).toEqual(4);
   });
 
-  xit('hamming distance in very long strand', function () {
+  it('hamming distance in very long strand', function () {
     expect(compute('GGACGGATTCTG', 'AGGACGGATTCT')).toEqual(9);
   });
 

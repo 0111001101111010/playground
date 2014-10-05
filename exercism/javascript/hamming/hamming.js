@@ -8,9 +8,10 @@ module.exports = hamming = {
       }
       else {
         _.each(a, function (data, range) {
-          console.log(data,range);
-          if(data !== b[range] && typeof b[range] !== null){
-            val++;
+          if( b.length > range){
+            if(data !== b[range] && typeof b[range] !== null){
+              val++;
+            }
           }
         });
       }
