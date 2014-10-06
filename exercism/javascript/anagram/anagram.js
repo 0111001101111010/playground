@@ -15,6 +15,9 @@ function anagram(word) {
 }
 
 function check(letters, word) {
-
-  return letters.size === word.length? true:false;
+  //check if it is the size
+  if ((letters.size === word.length)){
+    return true;
+  }
+  return false;
 }
