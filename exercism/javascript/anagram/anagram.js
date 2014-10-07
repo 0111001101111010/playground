@@ -16,9 +16,7 @@ function anagram(word) {
 function check(word,candidate) {
   //check if it is the size
   console.log(word, candidate);
-  if ((word.split('').size === word.length)){
-    return true;
-  }
+  var diff = _.difference(candidate, word.split(''));
+  console.log(diff);
 
-  return false;
 }
