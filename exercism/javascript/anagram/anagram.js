@@ -3,21 +3,22 @@ var _ = require("lodash");
 module.exports = anagram;
 
 function anagram(word) {
+  this.word = word;
   return {
     matches: function (list) {
-      var letters = word.split('');
-      var remainder = _.filter(list, function (word) {
-        return check(letters, word);
+      return _.filter(list, function (candidate) {
+          check(word,candidate);
       });
-      return remainder;
     }
   };
 }
 
-function check(letters, word) {
+function check(word,candidate) {
   //check if it is the size
-  if ((letters.size === word.length)){
+  console.log(word, candidate);
+  if ((word.split('').size === word.length)){
     return true;
   }
+
   return false;
 }
