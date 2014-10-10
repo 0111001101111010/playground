@@ -2,6 +2,8 @@ def hey(phrase):
   lastchar = phrase[-1:]
   if (lastchar == '!'):
     return 'Woah, chill out!'
+  elif (lastchar == '?'):
+    return 'Sure.'
   elif (len(phrase) == 0):
     return 'Fine. Be that way!'
   else:
