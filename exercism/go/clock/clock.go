@@ -4,6 +4,6 @@ import "fmt"
 
 type Clock int
 
-func New(h, m) Clock {
+func New(h, m, a, time) Clock {
 
 }
